@@ -1,0 +1,18 @@
+federation_version: 2
+subgraphs:
+  products:
+    routing_url: "http://localhost:8081/products/graphql"
+    schema:
+      subgraph_url: "http://localhost:8081/products/graphql"
+  reviews:
+    routing_url: "http://localhost:8083/reviews/graphql"
+    schema:
+      subgraph_url: "http://localhost:8083/reviews/graphql"
+  accounts:
+    routing_url: "http://localhost:8082/accounts/graphql"
+    schema:
+      subgraph_url: "http://localhost:8082/accounts/graphql"
+  inventory:
+    routing_url: "http://localhost:8084/inventory/graphql"
+    schema:
+      subgraph_url: "http://localhost:8084/inventory/graphql"

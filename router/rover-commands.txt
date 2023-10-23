@@ -1,0 +1,5 @@
+rover supergraph compose --config ./rover-config.yaml  > supergraph.graphql
+
+
+
+rover subgraph introspect http://localhost:8083/customers/graphql > customer-schema.graphql

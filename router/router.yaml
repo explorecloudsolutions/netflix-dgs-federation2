@@ -1,0 +1,42 @@
+telemetry:
+  metrics:
+    prometheus:
+      enabled: true
+    common:
+      attributes:
+        subgraph:
+          all:
+            errors:
+              extensions: # Include extensions data
+                - name: subgraph_error_extended_type # Name of the attribute
+                  path: .type # JSON query path to fetch data from extensions
+
+headers:
+  all:
+    request:
+      - propagate:
+          matching: .*
+# remove this comment if you want to use jwt plugin
+#plugins:
+#  graphql_router.jwt:
+#    algorithm: HS256
+#    key: "dGVzdDEyMw=="
+#    time_tolerance: 60
+#    max_token_life: 864000
+sandbox:
+  enabled: true
+# make sure you enable introspection
+supergraph:
+  introspection: true
+
+# make sure homepage is disabled
+homepage:
+  enabled: false
+health_check:
+  listen: 127.0.0.1:8090
+  enabled: true
+#rhai:
+  #scripts: src
+  #main: rhai_logging.rhai
+
+

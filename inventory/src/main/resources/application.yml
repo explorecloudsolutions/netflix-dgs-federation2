@@ -1,0 +1,3 @@
+server:
+  servlet.contextPath: /inventory
+  port: 8084

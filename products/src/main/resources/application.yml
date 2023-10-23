@@ -1,0 +1,3 @@
+server:
+  servlet.contextPath: /products
+  port: 8081
